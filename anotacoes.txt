@@ -34,4 +34,18 @@ docker run dockersamples/static-site
 docker rm idDoContainer --force (para a execução e remove o container)
 
 
+// sobe o container e define a porta da maquina e do container
 docker run -d -p 8080(porta da maquina):80(porta do container) nomeDaImagem
+
+
+// listar imagens
+docker image ls
+
+//informações da imagem
+docker inspect idDaImagem
+
+// comando para visualizar as camadas da imagem
+docker history idDaImagem
+
+//builda imagem a partir de dockerfile
+docker build -t nomeCriado/nomeImagem:versao .
