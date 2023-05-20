@@ -49,3 +49,17 @@ docker history idDaImagem
 
 //builda imagem a partir de dockerfile
 docker build -t nomeCriado/nomeImagem:versao .
+
+
+//"no run" 
+-v caminhoMaquina:caminhoContainer cria volume com bind container para maquina
+
+//mesmo exemplo acima usando --mount
+--mount 
+
+docker volume create nomeDoVolume
+docker run -it --mount soruce=meu-volume,target=/app ubuntu bash
+
+//tmpfs só roda no linux, cria um volume temporário dentro do host
+
+docker run -it --tmpfs=/app ubuntu bash
