@@ -81,3 +81,6 @@ docker network create --driver bridge minha-bridge
 // rede host - define um container com a rede vinculada ao host
 
 docker pull mongo:4.4.6
+
+//sobe o compose do docker
+docker-compose up 
