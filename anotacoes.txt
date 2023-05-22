@@ -63,3 +63,21 @@ docker run -it --mount soruce=meu-volume,target=/app ubuntu bash
 //tmpfs só roda no linux, cria um volume temporário dentro do host
 
 docker run -it --tmpfs=/app ubuntu bash
+
+//inspeciona as informações de um container em execução
+docker inspect nomeDoContainer
+
+// lista as redes criadas
+docker network ls
+
+// define um nome para o container
+docker run -it --name nomeDoContainer --network minha-bridge nomeDaImagem 
+
+//cria a propria rede para containers se chamarem através do name e não do ip
+docker network create --driver bridge minha-bridge
+
+// rede none - define um container com nenhuma rede disponível para o mesmo, sem nenhuma interface de rede vinculada
+
+// rede host - define um container com a rede vinculada ao host
+
+docker pull mongo:4.4.6
